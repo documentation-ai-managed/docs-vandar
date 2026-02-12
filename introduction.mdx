@@ -1,0 +1,138 @@
+---
+title: Introduction to Vandar
+description: Get an overview of Vandar, a documentation management platform designed to help teams organize, create, and publish project documentation efficiently.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Vandar helps teams create, organize, and publish documentation efficiently. You manage all project docs in one centralized space with real-time collaboration, version control, and customizable themes. Whether you build APIs, user guides, or technical specs, Vandar streamlines your workflow.
+
+Support multiple languages like English and Arabic (`فاندر`) out of the box. Customize layouts, add interactive components, and integrate with tools like GitHub or Slack.
+
+## Key Features
+
+Vandar offers powerful tools for documentation management.
+
+<Columns cols={3}>
+  <Card title="Real-time Collaboration" icon="users" href="#quick-start">
+    Edit docs together with teammates. See changes live and resolve conflicts easily.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="/changelog">
+    Track every change with full revision history. Roll back anytime.
+  </Card>
+  <Card title="Custom Components" icon="puzzle" href="#customization">
+    Embed interactive tabs, steps, and code examples seamlessly.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Start with our quickstart guide to set up your first project in under 5 minutes.
+</Callout>
+
+## Quick Start
+
+Get up and running quickly.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com` with your email.
+  </Step>
+  <Step title="New Project" icon="plus">
+    Click "New Project" and name it, like "API Docs".
+  </Step>
+  <Step title="Add First Page" icon="file-text">
+    Create an `introduction.mdx` file and start editing.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Hit publish to share your live docs site.
+  </Step>
+</Steps>
+
+## Quick Navigation
+
+Jump to essential sections.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Install and configure in minutes.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys.
+  </Card>
+  <Card title="Customization" icon="palette" href="#customization">
+    Tailor themes and languages.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    See latest updates.
+  </Card>
+</Columns>
+
+## Supported Languages and Customization
+
+Vandar supports multilingual docs natively.
+
+<Tabs>
+  <Tab title="English" icon="globe">
+    Default language for global teams.
+    
+    ```yaml
+    language: en
+    theme: light
+    ```
+  </Tab>
+  <Tab title="العربية" icon="globe">
+    Right-to-left support for Arabic (`فاندر`).
+    
+    ```yaml
+    language: ar
+    direction: rtl
+    ```
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="YAML,JSON">
+```yaml
+brand:
+  color: "#3B82F6"
+  logo: "/logo.svg"
+```
+```json
+{
+  "brand": {
+    "color": "#3B82F6",
+    "logo": "/logo.svg"
+  }
+}
+```
+</CodeGroup>
+
+## Brand Guidelines
+
+<Expandable title="Primary Brand Color and Usage" default-open="true">
+
+Use the primary brand color `#3B82F6` for headers and accents.
+
+| Element       | Color Value   | Usage Example                  |
+|---------------|---------------|--------------------------------|
+| Primary       | `#3B82F6`     | Buttons, links, headers        |
+| Secondary     | `#1D4ED8`     | Hover states, secondary UI     |
+| Text          | `#1F2937`     | Body text, labels              |
+
+Avoid using the primary color for backgrounds to maintain readability.
+
+</Expandable>
+
+<Expandable title="Logo Guidelines">
+
+- Always use SVG format for scalability
+- Minimum size: `120x40px`
+- Clear space: 1x logo height around edges
+- Do not stretch or recolor the logo
+
+</Expandable>
+
+Ready to build? Check the [quickstart](/quickstart) next.

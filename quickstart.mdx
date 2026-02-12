@@ -1,0 +1,142 @@
+---
+title: Quickstart Guide
+description: Set up your Vandar account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+Before starting, ensure you have:
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: GitHub account for version control integration
+</Callout>
+
+## Step 1: Create Your Vandar Account
+
+Sign up for Vandar in under a minute.
+
+<Steps>
+  <Step title="Visit Vandar Dashboard" icon="monitor">
+    Navigate to the [Vandar dashboard](https://app.vandar.com/signup).
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, password, and workspace name. Verify your email via the confirmation link sent to your inbox.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Select your plan (free tier available) and customize your brand color (`#3B82F6` for Vandar blue).
+  </Step>
+</Steps>
+
+## Step 2: Set Up Your First Documentation Space
+
+Create a project space to organize your docs.
+
+<Steps>
+  <Step title="Create New Space" icon="folder-plus">
+    Click **New Space** in the dashboard sidebar.
+    
+    Enter a name like `My Project Docs` and select a template (e.g., API Reference or Product Docs).
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set your space slug (e.g., `my-project-docs`), enable search, and add custom domains if needed.
+  </Step>
+</Steps>
+
+## Step 3: Upload Your Initial Documentation Files
+
+Add your first MDX files using multiple methods.
+
+<Tabs>
+  <Tab title="Drag & Drop" icon="upload">
+    Open your space editor and drag MDX, Markdown, or image files directly into the file tree.
+    
+    <Image
+      src="https://via.placeholder.com/800x400/3B82F6/white?text=Drag+%26+Drop+Files"
+      alt="Drag and drop files into Vandar editor"
+      width="800"
+      height="400"
+    />
+  </Tab>
+  <Tab title="GitHub Sync" icon="github">
+    Connect your GitHub repo:
+    
+````bash
+# In your space settings, paste your repo URL
+https://github.com/your-username/vandar-docs
+````
+    
+    Vandar auto-syncs changes on push.
+  </Tab>
+  <Tab title="Manual Upload" icon="cloud-upload">
+    Use the **Upload** button to select files from your local drive.
+  </Tab>
+</Tabs>
+
+## Step 4: Basic Navigation and Editor Overview
+
+Familiarize yourself with the Vandar interface.
+
+<Columns cols={2}>
+  <Card title="File Tree" icon="layout" href="#file-tree">
+    Browse and organize your MDX files hierarchically.
+  </Card>
+  <Card title="Live Editor" icon="edit-3" href="#editor">
+    Real-time preview with syntax highlighting for MDX, supports components like `<Callout>`.
+  </Card>
+  <Card title="Preview Pane" icon="eye" href="#preview">
+    Side-by-side view to check rendering instantly.
+  </Card>
+  <Card title="Publish Panel" icon="globe" href="#publish">
+    Deploy changes with one click, custom SEO, and analytics.
+  </Card>
+</Columns>
+
+## Step 5: Publish Your First Doc Page
+
+Make your docs live.
+
+<Steps>
+  <Step title="Write Sample Content" icon="edit">
+    Create `quickstart.mdx` with frontmatter:
+    
+````mdx
+```mdx
+---
+title: "My First Page"
+description: "Sample Vandar docs page"
+---
+```
+````
+  </Step>
+  <Step title="Preview and Edit" icon="eye">
+    Use the split view to validate components and formatting.
+  </Step>
+  <Step title="Publish" icon="rocket">
+    Click **Publish** > **All Changes**. Your docs are now live at `https://docs.vandar.com/my-project-docs/quickstart`.
+  </Step>
+</Steps>
+
+<Callout kind="success" title="Congratulations!">
+You've successfully set up Vandar and published your first documentation space. Customize further with themes, integrations, and advanced MDX components.
+</Callout>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys and webhooks.
+  </Card>
+  <Card title="Advanced Guides" icon="book-open" href="/guides">
+    Dive into custom components and SEO optimization.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with Vandar releases.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+- **Upload fails?** Check file size limits (50MB max) and MDX syntax.
+- **Preview not updating?** Refresh the editor or clear cache.
+- **Custom domain issues?** Verify DNS propagation (up to 48 hours).
+</Expandable>

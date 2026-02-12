@@ -1,0 +1,137 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and bug fixes in Vandar to stay informed about new features.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement", "bugfix"]}>
+
+## New Features
+
+- Added real-time webhook support for payment confirmations at `https://api.example.com/v1/webhooks`
+- Introduced dashboard analytics with export to CSV functionality
+
+## Improvements
+
+- Enhanced API rate limiting to support up to `>1000` requests per minute
+- Optimized documentation search with fuzzy matching
+
+## Bug Fixes
+
+- Fixed intermittent failures in payment retry logic
+- Resolved authentication token refresh issues in SDKs
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Multi-language support including Arabic (`فاندر`) in the dashboard UI
+- New `/v1/invoices` endpoint for bulk invoice generation
+
+## Bug Fixes
+
+- Corrected error handling for invalid `currency` parameters
+- Patched security vulnerability in webhook signature validation (CVE-2024-XXXX)
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated default API version from `v0` to `v1` – update your base URL to `https://api.example.com/v1`
+- Removed deprecated `legacy_token` authentication method
+
+## New Features
+
+- Core payment processing API with support for cards and bank transfers
+- User management endpoints at `https://api.example.com/v1/users`
+
+To migrate, follow the [upgrade guide](#upgrade-instructions).
+
+</Update>
+
+## Upgrade Instructions
+
+Upgrading Vandar ensures you benefit from the latest security patches and features. Follow these steps for a smooth transition.
+
+<Steps>
+  <Step title="Review Changelog" icon="book-open">
+
+  Check the breaking changes above and test in staging.
+
+  </Step>
+  <Step title="Update SDK" icon="download">
+
+  ```bash
+  npm update vandar-sdk
+  ```
+
+  Or for Python:
+
+  ````python
+  pip install --upgrade vandar-python
+  ````
+
+  </Step>
+  <Step title="Update API Calls" icon="code">
+
+  Replace old endpoints:
+
+  ````javascript
+  // Old
+  fetch('https://api.example.com/v0/payments')
+
+  // New
+  fetch('https://api.example.com/v1/payments')
+  ````
+
+  </Step>
+  <Step title="Test Webhooks" icon="zap">
+
+  Verify signatures using the new `v1` algorithm.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Subscribe to our RSS feed at `https://docs.example.com/changelog.xml` or join the Discord for instant notifications on new releases.
+</Callout>
+
+## Roadmap
+
+Stay ahead with upcoming enhancements.
+
+<Columns cols={2}>
+  <Card title="Q4 2024" icon="rocket" href="#recent-updates">
+    AI-powered fraud detection and mobile SDKs.
+  </Card>
+  <Card title="Q1 2025" icon="trending-up" href="/quickstart">
+    Global payout support and zero-downtime deployments.
+  </Card>
+</Columns>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-10-15 | Webhooks, analytics          |
+| v1.1.0  | 2024-09-20 | Invoices, multi-language     |
+| v1.0.0  | 2024-08-10 | Core API, breaking updates   |
+
+<Expandable title="Detailed Migration Guide for v1.0.0" default-open="false">
+
+For the `v1.0.0` breaking change, update your `Authorization` header:
+
+````javascript
+// Before
+headers: { 'Authorization': 'Legacy your-legacy-token' }
+
+// After
+headers: { 'Authorization': `Bearer ${YOUR_API_KEY}` }
+````
+
+</Expandable>

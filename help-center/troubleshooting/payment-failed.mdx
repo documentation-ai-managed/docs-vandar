@@ -1,0 +1,28 @@
+---
+title: Payment Request Failed
+description: Resolve issues when a payment fails on Vandar.
+---
+
+## Symptoms
+
+- Payment fails with error
+- No transaction created
+
+## Causes
+
+- Invalid API key or credentials
+- Network connectivity issues
+
+## Quick Fix
+
+<Steps>
+  <Step title="Verify API key">
+    ````bash
+    curl -I https://api.vandar.io/v1/status 
+    # check for authentication errors
+    ````
+  </Step>
+  <Step title="Check Internet connection">
+    Ensure server reaches `api.vandar.io` without firewalls blocking.
+  </Step>
+</Steps>

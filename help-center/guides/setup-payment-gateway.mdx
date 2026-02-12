@@ -1,0 +1,26 @@
+---
+title: Setting Up Vandar Payment Gateway
+description: A simple guide to enable Vandar payments.
+---
+
+## Overview
+
+Integrate Vandar to accept payments in your app.
+
+## Steps
+
+<Steps>
+  <Step title="Get your API key">
+    Visit dashboard, generate your key in the API section.
+  </Step>
+  <Step title="Send payment request">
+    ````bash
+    curl -X POST https://api.vandar.io/v1/payments \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"amount":10000}'
+    ````
+  </Step>
+  <Step title="Handle redirect">
+    Users are redirected to payment page, then back with result.
+  </Step>
+</Steps>
